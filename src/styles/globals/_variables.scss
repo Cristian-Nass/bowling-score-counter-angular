@@ -1,0 +1,47 @@
+/****************** COLOR VARS *******************/
+
+// Native colors
+$color-native-black: #000000 !default;
+$color-native-white: #ffffff !default;
+
+// Primary colors
+$color-primary-black: #000000 !default;
+$color-primary-white: #ffffff !default;
+
+// Accent colors
+$color-red-hover: #ff756c !default;
+$color-red-primary: #ff4c40 !default;
+$color-red-border: #d90e00 !default;
+$color-red-active: #d90e00 !default;
+$color-orange-hover: #ffb77f !default;
+$color-orange-secondary: #ffa159 !default;
+$color-orange-border: #ff6f00 !default;
+$color-orange-active: #ff6f00 !default;
+
+// Playful colors
+$color-green-success: #06c270 !default;
+$color-orange-warning: #ff8800 !default;
+$color-red-danger: #fe2b1d !default;
+$color-yellow: #ffc107 !default;
+
+// Neutrals colors
+$color-grey-60: #929192 !default;
+$color-grey-50: #aeaeaf !default;
+$color-grey-40: #d1d2d4 !default;
+$color-grey-30: #e2e2e4 !default;
+$color-grey-20: #f1f1f2 !default;
+$color-grey-10: #f7f7f8 !default;
+$color-grey: #fafafc !default;
+
+/****************** SITE SIZE VARS *******************/
+
+$site-box-spacing-5: 5px;
+$site-box-spacing-10: 10px;
+$site-box-spacing-20: 20px;
+$site-box-spacing-40: 40px;
+$site-box-spacing-60: 60px;
+$site-box-spacing-100: 100px;
+
+// Box Shadows
+$box-shadow: 0 0 14px -10px rgba(0, 0, 0, 0.8);
+$box-shadow-hover: 0 0 20px -10px rgba(0, 0, 0, 1);

@@ -1,0 +1,49 @@
+<div class="score-counter">
+  <h3 class="score-counter__title">
+    <ng-container *ngIf="rollNumber && rollNumber < 11; else gameOver">
+      Your {{rollNumber}} frame:
+    </ng-container>
+  </h3>
+  <form *ngIf="rollNumber && rollNumber < 11" class="score-counter__form" name="pinball" (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <div class="score-counter__form-item">
+      <label for="firstRoll">First Roll</label>
+      <select
+        name="firstThrow"
+        ngModel
+        (change)="firstThrowChange(first)"
+        #first
+      >
+        <option id="firstRoll" *ngFor="let pin of firstThrowRemainingPins" value="{{ pin }}">
+          {{ pin }}
+        </option>
+      </select>
+    </div>
+    <div class="score-counter__form-item">
+      <label for="secondRoll">Second Roll</label>
+      <select
+        name="secondThrow"
+        ngModel
+        (change)="secondThrowChange(second)"
+        #second
+      >
+        <option id="secondRoll" *ngFor="let pin of secondThrowRemainingPins" value="{{ pin }}">
+          {{ pin }}
+        </option>
+      </select>
+    </div>
+    <div class="score-counter__form-item">
+      <label for="secondRoll">Third Roll</label>
+      <select name="thirdThrow" ngModel [disabled]="!hasThirdRoll">
+        <option id="thirdRoll" *ngFor="let pin of thirdThrowRemainingPins" value="{{ pin }}">
+          {{ pin }}
+        </option>
+      </select>
+    </div>
+
+    <app-button *ngIf="rollNumber" buttonType="submit" type="primary" [disabled]="rollNumber > 10">Submit</app-button>
+  </form>
+</div>
+
+<ng-template #gameOver>
+  Game Over
+</ng-template>

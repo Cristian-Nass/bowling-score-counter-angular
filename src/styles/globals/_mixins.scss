@@ -1,0 +1,15 @@
+@mixin typeset($type) {
+  @if ($type == TITLE) {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 40px;
+  } @else if ($type == CAPTION) {
+    font-size: 14px;
+    font-weight: lighter;
+  } @else if ($type == BODY) {
+    font-size: 16px;
+    font-weight: normal;
+  } @else {
+    @error "Typeset: " + $type + " is not valid";
+  }
+}

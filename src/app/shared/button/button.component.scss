@@ -1,0 +1,30 @@
+@import "src/styles/globals/global";
+
+.button {
+  height: $site-box-spacing-40;
+  padding: $site-box-spacing-10 $site-box-spacing-20;
+  border-radius: $site-box-spacing-10;
+  background-color: $color-grey-30;
+  &:hover {
+    background-color: darken($color-grey-30, 2);
+  }
+
+  &--primary {
+    color: $color-native-white;
+    background-color: $color-orange-active;
+    &:hover {
+      background-color: $color-orange-hover;
+    }
+  }
+
+  &--secondary {
+    color: $color-red-active;
+    background-color: transparent;
+    border: 1px solid $color-red-active;
+    &:hover {
+      color: $color-red-hover;
+      background-color: transparent;
+      border: 1px solid $color-red-hover;
+    }
+  }
+}

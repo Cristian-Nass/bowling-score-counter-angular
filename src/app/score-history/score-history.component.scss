@@ -1,0 +1,11 @@
+@import 'src/styles/globals/global';
+
+.score-history {
+  &__title {
+    @include typeset(TITLE);
+  }
+
+  &__list {
+    @include typeset(BODY);
+  }
+}

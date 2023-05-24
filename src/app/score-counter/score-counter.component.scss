@@ -1,0 +1,18 @@
+@import "src/styles/globals/global";
+
+.score-counter {
+  &__title {
+    @include typeset(TITLE);
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: $site-box-spacing-20;
+  }
+
+  &__form-item {
+    display: flex;
+    flex-direction: column;
+  }
+}

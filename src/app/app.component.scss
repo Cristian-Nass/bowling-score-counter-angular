@@ -1,0 +1,34 @@
+@import 'src/styles/globals/global';
+
+.app {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+
+  &__main {
+    position: absolute;
+    width: 100%;
+    max-width: 600px;
+    height: 900px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: auto;
+    background-color: $color-native-white;
+    padding: $site-box-spacing-20;
+    border-radius: $site-box-spacing-10;
+    box-shadow: $box-shadow;
+    display: flex;
+    gap: $site-box-spacing-20;
+  }
+
+  &__main-counter {
+    flex: 1;
+    border-right: 1px solid $color-grey-50;
+    padding-right: $site-box-spacing-20;
+  }
+
+  &__main-score {
+    flex: 1;
+  }
+}
